@@ -122,6 +122,7 @@ int main() {
           // ----
           // Find coefficients of the polynomial
           Eigen::VectorXd coeffs = polyfit(car_ptsx, car_ptsy, 3);
+          // Calcuate cte and epsi
           double cte = polyeval(coeffs, 0);
           double epsi = -atan(coeffs[1]);
 
