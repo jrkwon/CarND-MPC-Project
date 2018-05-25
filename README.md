@@ -23,7 +23,7 @@ epsi[t+1] = psi[t] - psides[t] + v[t]*delta[t]/Lf*dt
 
 MPC approximates a continuous reference trajectory using discrete paths. A larger values of *dt* results in a less frequent actuation, which makes it harder to a continuous trajectory but less computation. And a smaller value of *dt* results in a more frequent actuation, which more accurately approximates a continuous reference trajectory but more computation. 
 
-The prediction horizon *T* is the duration over which future predictions are made. *T* is the product of two variables, *N* and *dt*. A good approach to setting *N*, *dt*, and *T* is to first determine a reasonable range for *T* and then tune *dt* and *N* appropriately, keeping the effect of each in mind. I started with 1.0 sec for *T*. The initial combination of *N* was chosen as 10 then *dt* is automatically defined as 0.01. It worked OK until the track meets continuous sharp turns. I increased the timestep to 20, then again *dt* is automatically selected as 0.05. This time the driving is a little bit smoother and manages to drive the whole track. See the [demo](https://youtu.be/qRRrpvSleyU).
+The prediction horizon *T* is the duration over which future predictions are made. *T* is the product of two variables, *N* and *dt*. A good approach to setting *N*, *dt*, and *T* is to first determine a reasonable range for *T* and then tune *dt* and *N* appropriately, keeping the effect of each in mind. I started with 1.0 sec for *T*. The initial combination of *N* was chosen as 10 then *dt* is automatically defined as 0.01. It worked OK until the track meets continuous sharp turns. I increased the timestep to 20, then again *dt* is automatically selected as 0.05. This time the driving is a little bit smoother and manages to drive the whole track. See the [demo](https://youtu.be/UjYNqLwhUvc).
 
 ### Polynomial Fitting and MPC Preprocessing
 
@@ -74,7 +74,7 @@ latency_cte = cte + v*sin(epsi)*latency;
 latency_epsi = epsi - v*delta*latency/Lf;
 ```
 
-See the [demo](https://youtu.be/3n9QVA0b-RE). Note that the prediction horizon *T* is 0.5 and *N* is 10 in this demo.
+See the [demo](https://youtu.be/SmoW_LOfEv4). Note that the prediction horizon *T* is 0.5 and *N* is 10 in this demo.
 
 ---
 
