@@ -74,7 +74,7 @@ latency_cte = cte + v*sin(epsi)*latency;
 latency_epsi = epsi - v*delta*deg2rad(25)*latency/Lf;
 ```
 
-See the [demo](https://youtu.be/c1QtVtu_3-U). Note that the prediction horizon *T* is 0.5 and *N* is 10 in this demo.
+See the [demo](https://youtu.be/3n9QVA0b-RE). Note that the prediction horizon *T* is 0.5 and *N* is 10 in this demo.
 
 ---
 
