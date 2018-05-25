@@ -134,10 +134,10 @@ int main() {
           double Lf = mpc.vehicle_length;
           double latency_x = v*latency; // v*cos(0)*latency;
           double latency_y = 0;         // v*sin(0)*latency;
-          double latency_psi = -v*delta*deg2rad(25)*latency/Lf;
+          double latency_psi = -v*delta*latency/Lf;
           double latency_v = v + a*latency;
           double latency_cte = cte + v*sin(epsi)*latency;
-          double latency_epsi = epsi - v*delta*deg2rad(25)*latency/Lf;
+          double latency_epsi = epsi - v*delta*latency/Lf;
           state << latency_x, latency_y, latency_psi, latency_v, latency_cte, latency_epsi;
 #else
           state << 0, 0, 0, v, cte, epsi;

@@ -68,10 +68,10 @@ Latency affects actuator dynamics; (e.g) the time elapsed between when a steerin
 ```
 latency_x = v*latency; // v*cos(0)*latency;
 latency_y = 0;         // v*sin(0)*latency;
-latency_psi = -v*delta*deg2rad(25)*latency/Lf;
+latency_psi = -v*delta*latency/Lf;
 latency_v = v + a*latency;
 latency_cte = cte + v*sin(epsi)*latency;
-latency_epsi = epsi - v*delta*deg2rad(25)*latency/Lf;
+latency_epsi = epsi - v*delta*latency/Lf;
 ```
 
 See the [demo](https://youtu.be/3n9QVA0b-RE). Note that the prediction horizon *T* is 0.5 and *N* is 10 in this demo.
